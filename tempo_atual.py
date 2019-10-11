@@ -1,4 +1,5 @@
 from datetime import datetime
+from time import sleep
 
 class StartTime():
     def __init__(self):
@@ -50,8 +51,10 @@ class StartTime():
                 self.time = ('{}:{}:{}'.format(self.h, self.m, self.s))
                 return self.time
         while True: # Atualiza a hora no console
+            print('-'*50)
             print('Horário: ', DateTimeNow().time_now())
             print('Data', DateTimeNow().date_now())
+            sleep(1)
 
 #Iniciar
 StartTime()
